@@ -1,0 +1,28 @@
+# ---------------------------------------------
+# Ignorar Archivos Generados por el Sistema
+# ---------------------------------------------
+# macOS (si usas Mac)
+.DS_Store
+
+# Miniaturas de Windows
+Thumbs.db
+
+# ---------------------------------------------
+# Ignorar Entornos de Desarrollo
+# ---------------------------------------------
+# Visual Studio Code (si usas VS Code)
+.vscode/
+
+# Atom
+.atom/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ---------------------------------------------
+# Ignorar Archivos de Prueba Local (Opcional)
+# ---------------------------------------------
+# Si generas archivos de prueba o logs
+*.log
+*.tmp
