@@ -1,0 +1,107 @@
+/* (Grid, Flex y A11y Media Queries)
+Este archivo implementa el CSS Grid para el layout principal, Flexbox para los componentes y las Media Queries de Accesibilidad. */
+
+
+/* 1. ESTILOS BASE: MOBILE-FIRST */
+/* ----------------------------------------------------- */
+
+:root { font-size: 16px; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Flexbox para la barra de navegación (alineación en 1D) */
+.flex-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-top: 1px solid #ccc;
+}
+.flex-nav a { margin-right: 1em; }
+
+/* Flexbox para las tarjetas internas (alineación en 1D) */
+.flex-cards {
+    display: flex;
+    flex-direction: column; /* Apiladas en móvil */
+    gap: 10px;
+}
+.flex-item {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+
+/* ----------------------------------------------------- */
+/* 2. MAQUETACIÓN con CSS GRID (Desktop Breakpoint) */
+/* Aplicamos GRID cuando tenemos suficiente espacio. */
+/* ----------------------------------------------------- */
+
+@media screen and (min-width: 900px) {
+    
+    /* Contenedor principal de la página (2D Layout) */
+    .page-wrapper {
+        display: grid;
+        /* Definimos dos columnas: la principal (3 partes) y la sidebar (1 parte) */
+        grid-template-columns: 3fr 1fr; 
+        grid-gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    /* El MAIN ocupa la primera columna */
+    .grid-main {
+        grid-column: 1 / 2;
+    }
+    
+    /* La SIDEBAR ocupa la segunda columna */
+    .grid-sidebar {
+        grid-column: 2 / 3;
+        padding: 1rem;
+        background: #eee;
+    }
+
+    /* En desktop, las tarjetas internas usan Flexbox horizontalmente */
+    .flex-cards {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+    .flex-item {
+        /* Distribuir el espacio restante uniformemente */
+        flex: 1; 
+        margin-right: 10px; 
+    }
+}
+
+
+/* ----------------------------------------------------- */
+/* 3. MEDIA QUERIES PARA ACCESIBILIDAD (A11y) */
+/* ----------------------------------------------------- */
+
+/* A11Y: Preferencia de Esquema de Color (Modo Oscuro) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    .flex-item, .grid-sidebar {
+        background: #333;
+        border-color: #555;
+        color: #e0e0e0;
+    }
+}
+
+/* A11Y: Preferencia de Movimiento Reducido */
+/* Ejemplo: Si hay transiciones, las desactiva */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}

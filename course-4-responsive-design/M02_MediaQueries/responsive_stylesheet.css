@@ -1,0 +1,89 @@
+
+
+/* - (Implementación de Breakpoints)
+Este es el archivo principal. Contiene los estilos base (Mobile-First) y luego añade estilos para Tablet y Desktop usando min-width.
+/* 1. ESTILOS BASE: MOBILE-FIRST (Menos de 600px) */
+/* ----------------------------------------------------- */
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.content-section {
+    width: 95%; 
+    margin: 0 auto;
+    padding: 1em; 
+}
+
+/* Las tarjetas se apilan verticalmente por defecto */
+.card-container {
+    display: block; 
+    margin-top: 1rem;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------------------------- */
+/* 2. MEDIA QUERY: TABLET (Mínimo 600px de ancho) */
+/* El diseño pasa de 1 columna a 2 columnas. */
+/* ----------------------------------------------------- */
+
+@media screen and (min-width: 600px) {
+    
+    body {
+        /* Un pequeño cambio de color para indicar visualmente el breakpoint */
+        background-color: #e0f7fa; 
+    }
+    
+    .card-container {
+        /* Usamos Flexbox simple para crear el layout de 2 columnas */
+        display: flex;
+        flex-wrap: wrap; /* Permitir que los elementos salten de línea si es necesario */
+        gap: 15px; /* Espacio entre tarjetas */
+    }
+
+    .feature-card {
+        /* 50% del ancho, menos la mitad del gap, para 2 columnas */
+        width: calc(50% - 7.5px); 
+        /* Quitar el margen inferior, ya que el gap lo controla */
+        margin-bottom: 0; 
+    }
+}
+
+
+/* ----------------------------------------------------- */
+/* 3. MEDIA QUERY: DESKTOP (Mínimo 1024px de ancho) */
+/* El diseño pasa de 2 columnas a 3 columnas. */
+/* ----------------------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+    
+    body {
+        /* Otro pequeño cambio para indicar el breakpoint de escritorio */
+        background-color: #f3e5f5; 
+    }
+    
+    .content-section {
+        /* Aumentar el ancho del contenido principal en pantallas grandes */
+        width: 80%; 
+    }
+
+    .feature-card {
+        /* 33.333% del ancho, menos el espacio para el gap, para 3 columnas */
+        width: calc(33.333% - 10px); 
+    }
+}

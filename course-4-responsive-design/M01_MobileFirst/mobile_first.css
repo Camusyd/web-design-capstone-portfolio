@@ -1,0 +1,54 @@
+/*
+ * Módulo 1: Mobile-First y Unidades Fluidas
+ * Los estilos aquí definidos son el PUNTO DE PARTIDA para la pantalla más pequeña.
+ */
+
+/* Estilos Raíz y Reseteo */
+:root {
+    /* Base para la unidad 'rem' */
+    font-size: 16px; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem; /* Usa rem para márgenes del cuerpo */
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Tipografía Fluida (Usando 'rem') */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    /* Usa 'em' para el espaciado entre líneas relativo al tamaño de la fuente del elemento */
+    line-height: 1.6em; 
+}
+
+/* Contenedores Fluidos (Usando '%') */
+.content-section {
+    width: 95%; /* Ocupa casi todo el ancho disponible en el móvil */
+    margin: 0 auto;
+    padding: 1em; /* Usa em para el padding interno de la sección */
+}
+
+/* Componentes (Las tarjetas están apiladas por defecto en móvil) */
+.card-container {
+    /* Display por defecto: block, hace que las tarjetas se apilen verticalmente (Mobile-First) */
+    margin-top: 1.5rem;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M04 - Proyecto Final: Galería Accesible PhotoSphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Saltar al Contenido Principal</a>
+
+    <header role="banner">
+        <h1>PhotoSphere: Galería Accesible y Dinámica</h1>
+    </header>
+
+    <main id="main-content">
+        <section id="visor" aria-live="polite">
+            <figure>
+                <img id="image" 
+                    class="fade-in"
+                    src="https://i.pinimg.com/originals/d1/75/d9/d175d9512ea84276cbeffb208abf8c81.jpg" 
+                    alt="Vista principal de la Galería: Un paisaje al atardecer." 
+                    width="600" 
+                    height="400">
+                <figcaption id="caption">
+                    Selecciona una miniatura o usa la tecla Tab.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="miniaturas">
+            <h2>Navegación de Miniaturas</h2>
+            <ul id="image-list" role="group" aria-label="Selecciona una imagen para el visor principal.">
+                </ul>
+        </section>
+    </main>
+
+    <script src="final_gallery.js"></script>
+</body>
+</html>

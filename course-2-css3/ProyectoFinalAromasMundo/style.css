@@ -1,0 +1,174 @@
+/* -----------------------------------------------------------------
+   FILE: style.css (Proyecto Final - Aromas del Mundo)
+   ----------------------------------------------------------------- */
+
+/* == ESTILOS BASE Y TIPOGRAFÍA == */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #f4f4f4; /* Fondo claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4a2c22; /* Marrón Oscuro (Café) */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #a77c57; /* Marrón Suave/Dorado */
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #f0e68c; /* Dorado Claro para contraste */
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* == 1. ENLACE "SALTAR AL CONTENIDO" (Accesible) == */
+a[href="#main_content"] {
+    position: absolute;
+    left: -9999px; /* Oculto por defecto */
+}
+
+a[href="#main_content"]:focus {
+    position: static; /* Solo visible al enfocar */
+    left: auto;
+    display: block;
+    color: white;
+    background-color: #a77c57;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+/* == 2. NAVEGACIÓN (Accesible y Atractiva - Usando FLEX) == */
+.flex-nav {
+    background-color: #5d4037; /* Marrón ligeramente más claro */
+    padding: 10px 0;
+}
+
+.flex-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Aplica la propiedad flex */
+    justify-content: center; /* Centra los ítems */
+}
+
+.flex-nav ul li {
+    margin: 0 20px;
+}
+
+.flex-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Propiedad hover interesante */
+}
+
+/* Pseudo-clase hover con transición */
+.flex-nav a:hover {
+    background-color: #795548; /* Color de fondo más claro al pasar el mouse */
+    transform: scale(1.1); /* Escala ligeramente el enlace */
+}
+
+/* == 3. MODELO DE CAJA EN IMÁGENES == */
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    
+    /* Requisitos del Modelo de Caja */
+    border: 3px solid #f0e68c; /* Borde dorado */
+    padding: 5px; /* Relleno dentro del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo específico para las imágenes en la galería */
+.gallery-flex img {
+    width: 280px; /* Ancho fijo para galería */
+    height: 180px;
+    object-fit: cover;
+}
+
+
+/* == 4. LAYOUTS AVANZADOS == */
+
+/* Requisito GRID (Página index.html) */
+.grid-container {
+    display: grid; /* Aplica la propiedad grid */
+    grid-template-columns: 1fr 1.5fr; /* Dos columnas: una para imagen, otra más ancha para texto */
+    gap: 30px; /* Espacio entre celdas */
+    align-items: start; /* Alinea los ítems al inicio */
+    padding: 20px;
+}
+
+.grid-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Requisito FLEX (Página gallery.html) */
+.gallery-flex {
+    display: flex; /* Aplica la propiedad flex */
+    flex-wrap: wrap; /* Permite que los elementos salten de línea */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    gap: 20px;
+    padding: 10px;
+}
+
+/* == 5. SELECTOR NTH-CHILD (Página drinks.html) == */
+
+.drink-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* nth-child para dar estilos alternativos */
+.drink-item:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* nth-child + pseudo-clase hover (efecto interesante) */
+.drink-item:nth-child(even):hover {
+    background-color: #e0f2f1; /* Fondo verde claro */
+    box-shadow: 0 0 10px #009688;
+}
+
+/* nth-child para bordes de imagen diferentes en galería */
+.gallery-flex img:nth-child(3n) { /* Cada tercer imagen */
+    border-radius: 50%; /* Borde circular */
+    border-color: #a77c57;
+}
+
+/* == FOOTER == */
+footer {
+    background-color: #4a2c22;
+    color: #f0e68c;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}

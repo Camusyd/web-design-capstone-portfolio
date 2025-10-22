@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conceptos Fundamentales de CSS</title>
+  <link rel="stylesheet" href="AdvanceSelectrosCSS.css">
+</head>
+<body id="principal">
+
+  <!-- Enlace de accesibilidad -->
+  <a href="#main_content">Saltar al contenido principal</a>
+
+  <header>
+    <h1>📚 Conceptos Fundamentales de CSS</h1>
+    <nav>
+      <a href="#selectores">Selectores</a>
+      <a href="#cascada">Cascada</a>
+      <a href="#estilo">Estilo</a>
+      <a href="#maquetacion">Maquetación</a>
+      <a href="#anclajes">Anclajes</a>
+    </nav>
+  </header>
+
+  <main id="main_content">
+    <!-- ==========================
+    1. SELECTORES
+    =========================== -->
+    <section id="selectores">
+      <h2>1️⃣ Selectores Básicos</h2>
+      <p>Ejemplo de selector de <strong>elemento</strong>: todos los párrafos son verdes (por cascada).</p>
+      <p class="destacado">Este párrafo usa una <strong>clase</strong> llamada <code>.destacado</code>.</p>
+      <p id="aviso">Y este usa un <strong>ID</strong> llamado <code>#aviso</code>, que tiene más prioridad.</p>
+    </section>
+
+    <!-- ==========================
+    2. SELECTORES DESCENDENTES
+    =========================== -->
+    <section>
+      <h2>2️⃣ Selectores Descendentes</h2>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Acerca de</a>
+        <a href="#">Contacto</a>
+      </nav>
+      <p>Los enlaces dentro de <code>&lt;nav&gt;</code> son afectados por selectores descendentes.</p>
+    </section>
+
+    <!-- ==========================
+    3. CASCADA Y ESPECIFICIDAD
+    =========================== -->
+    <section id="cascada">
+      <h2>3️⃣ Cascada y Especificidad</h2>
+      <p class="demo">Este texto muestra cómo la última regla gana (color púrpura).</p>
+      <p class="demo" id="importante">Este texto tiene ID y gana sobre todas (color naranja).</p>
+    </section>
+
+    <!-- ==========================
+    4. PROPIEDADES DE ESTILO
+    =========================== -->
+    <section id="estilo">
+      <h2>4️⃣ Propiedades de Estilo Comunes</h2>
+      <ul>
+        <li>Sin viñetas por <code>list-style-type: none;</code></li>
+        <li>Sin márgenes por defecto</li>
+        <li>Texto sin subrayado por <code>text-decoration: none;</code></li>
+      </ul>
+      <a href="#">Enlace de ejemplo sin subrayado</a>
+    </section>
+
+    <!-- ==========================
+    5. MAQUETACIÓN
+    =========================== -->
+    <section id="maquetacion">
+      <h2>5️⃣ Maquetación con Grid y Flexbox</h2>
+
+      <h3>🔹 Ejemplo de Grid</h3>
+      <div class="grid-container">
+        <div>Columna 1</div>
+        <div>Columna 2</div>
+        <div>Columna 3</div>
+        <div>Columna 4</div>
+      </div>
+
+      <h3>🔹 Ejemplo de Flexbox</h3>
+      <div class="flex-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </div>
+    </section>
+
+    <!-- ==========================
+    6. ANCLAJES
+    =========================== -->
+    <section id="anclajes">
+      <h2>6️⃣ Anclajes y Accesibilidad</h2>
+      <p>
+        El símbolo <code>#</code> sirve para vincular enlaces internos, como este que te lleva al
+        <a href="#selectores">inicio de los selectores</a>.
+      </p>
+      <p>
+        También se usa en CSS para referirse a IDs, por ejemplo <code>#principal</code>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>📘 Curso CSS3 | Ejemplo de aprendizaje práctico</p>
+  </footer>
+
+</body>
+</html>

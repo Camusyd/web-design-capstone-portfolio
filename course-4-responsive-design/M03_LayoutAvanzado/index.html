@@ -1,0 +1,53 @@
+<!-- (Estructura con Layout de Blog)
+La estructura HTML utiliza secciones semánticas (<header>, <main>, <aside>, <footer>) que serán posicionadas usando CSS Grid y Flexbox. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>M03 - Flexbox, Grid y Accesibilidad</title>
+    <link rel="stylesheet" href="grid_flex_layout.css">
+</head>
+<body>
+
+    <header class="grid-header">
+        <h1>Módulo 3: Layout con Grid y Flexbox</h1>
+        <nav class="flex-nav">
+            <a href="#">Inicio</a>
+            <a href="#">Artículos</a>
+            <a href="#">Contacto</a>
+            <button id="toggle-contrast">Toggle Alto Contraste</button>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <main class="grid-main">
+            <h2>Maquetación con CSS Grid</h2>
+            <p>En móvil, esta sección principal se muestra a todo el ancho. Al pasar a desktop, esta sección será la columna principal y se ubicará junto a la barra lateral, gracias a CSS Grid.</p>
+            
+            <section class="flex-cards">
+                <h3>Componentes con Flexbox</h3>
+                <article class="flex-item">Caja 1</article>
+                <article class="flex-item">Caja 2</article>
+                <article class="flex-item">Caja 3</article>
+            </section>
+        </main>
+    
+        <aside class="grid-sidebar">
+            <h3>Barra Lateral</h3>
+            <p>Contenido secundario. En móvil, se muestra debajo del contenido principal. En desktop, se coloca a la derecha (o izquierda) usando la plantilla de Grid.</p>
+        </aside>
+    </div>
+
+    <footer class="grid-footer">
+        <p>Implementación de Media Queries para accesibilidad (Modo Oscuro, Contraste).</p>
+    </footer>
+
+    <script>
+        document.getElementById('toggle-contrast').addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+        });
+    </script>
+</body>
+</html>

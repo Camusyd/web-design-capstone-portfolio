@@ -1,0 +1,87 @@
+/* ------------------------------------- */
+/* A11y: Enlace Saltar al Contenido */
+/* ------------------------------------- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0; /* Aparece al ser enfocado */
+}
+
+/* ------------------------------------- */
+/* Transición Visual Única (Fade) */
+/* ------------------------------------- */
+#image {
+    /* La transición se aplica a la opacidad */
+    transition: opacity 0.4s ease-in-out; 
+}
+
+/* La clase que JS QUITA inmediatamente */
+.fade-out {
+    opacity: 0;
+}
+
+/* La clase que JS AÑADE para que la imagen se vea */
+.fade-in {
+    opacity: 1;
+}
+
+/* El resto de estilos son los del Módulo 2/3... */
+/* ... (Estilos de visor, caption, y miniaturas) */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Visor de Imagen Principal */
+#visor {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+#caption {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Miniaturas */
+#image-list {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Usamos Flexbox para el layout de las miniaturas */
+    justify-content: center;
+    gap: 15px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid transparent;
+    cursor: pointer; /* Indica interactividad */
+    transition: border 0.2s;
+}
+
+/* Efecto visual al hacer hover */
+.thumbnail:hover,
+.thumbnail:focus { /* Añadimos :focus por accesibilidad */
+    border-color: #007bff;
+    outline: none; /* Quitamos el outline predeterminado si el border es suficiente */
+}

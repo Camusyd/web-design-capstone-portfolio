@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>M04 - Responsive Dev Showcase: Proyecto Final</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="custom_styles.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="80" data-bs-theme="light"> 
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="main-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#top">Responsive Dev</a>
+                
+                <div class="form-check form-switch me-3 order-lg-last">
+                    <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                    <label class="form-check-label text-white" for="darkModeSwitch"><i class="bi bi-moon"></i></label>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Fundamentos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tecnicas">Maquetación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#galeria">Ejemplos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section text-center d-flex align-items-center justify-content-center text-white" id="top">
+        <div class="container z-1">
+            <h1 class="display-3 fw-bold">Responsive Showcase: La Web Moderna</h1>
+            <p class="lead mb-4">Integrando **Mobile-First**, **A11y**, **Grid** y **Bootstrap** en un diseño unificado.</p>
+            <a href="#servicios" class="btn btn-primary btn-lg shadow-lg">DEMO</a>
+        </div>
+        <div class="overlay"></div>
+    </section>
+
+    <main class="container py-5">
+        
+        <section class="row mb-5 text-center" id="servicios">
+            <h2 class="mb-4 display-6">Principios Fundamentales</h2>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card h-100 shadow-sm p-3 border-primary">
+                    <h5 class="card-title text-primary"><i class="bi bi-phone"></i> Mobile-First</h5>
+                    <p class="card-text">La base del diseño responsivo moderno. Comenzamos con estilos para el móvil (clase `col-12`) y luego **añadimos** complejidad con `min-width` para pantallas grandes. **Mejora el rendimiento.**</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card h-100 shadow-sm p-3 border-success">
+                    <h5 class="card-title text-success"><i class="bi bi-arrows-expand"></i> Media Queries</h5>
+                    <p class="card-text">Permiten cambiar el layout y los estilos en puntos clave (**breakpoints**). Bootstrap usa `min-width` (ej., `col-md-6`) para activar estos estilos en resoluciones mayores a 768px.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card h-100 shadow-sm p-3 border-warning">
+                    <h5 class="card-title text-warning"><i class="bi bi-pip"></i> Unidades Fluidas</h5>
+                    <p class="card-text">Uso de **`rem`** (tipografía) y **`%`** (ancho de contenedores) en lugar de píxeles fijos. Garantiza que el contenido y el espaciado escalen proporcionalmente al tamaño del *viewport*.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="row mb-5 justify-content-center" id="tecnicas">
+            <h2 class="text-center mb-5 display-6">Maquetación Avanzada: Grid & A11y</h2>
+            <div class="card shadow p-3 w-75">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary">CSS Grid y Flexbox</h4>
+                            <p class="card-text">El sistema de **Grid de Bootstrap** es una implementación práctica de **CSS Grid**. Aquí, el layout utiliza `row` y `col-md-*` para dividir el espacio. Dentro, usamos Flexbox (`d-flex`) para la alineación perfecta de la imagen y el texto, demostrando una **maquetación mixta** profesional.</p>
+                            
+                            <h4 class="card-title text-success mt-4">Accesibilidad Dinámica</h4>
+                            <p class="card-text">El **Toggle de Modo Oscuro** en la Navbar es un ejemplo de las Media Queries de accesibilidad (`prefers-color-scheme`) controladas manualmente con JavaScript para ofrecer una opción de alto contraste o visualización nocturna al usuario.</p>
+                        </div>
+                    </div>
+                     <div class="col-md-4 text-center">
+                        <img src="https://miro.medium.com/v2/1*gcXtf3zpYLr7-dEOeTDcOg.jpeg" alt="Icono CSS Grid" class="img-fluid rounded-circle p-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="mb-5 py-5 bg-light rounded shadow-sm">
+            <h2 class="text-center mb-4 display-6">Ejemplos Interactivos (Bootstrap JS)</h2>
+            <div id="carouselExampleControls" class="carousel slide shadow mx-auto" style="max-width: 800px;" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://shapedplugin.com/wp-content/uploads/2023/05/responsive-wordpress-carousel-plugin-of-2021-01-2-8.webp" class="d-block w-100" alt="Ejemplo Carrusel 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Componentes con Funcionalidad</h5>
+                            <p>El carrusel es 100% responsivo y viene con ARIA/accesibilidad integrada.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.ytimg.com/vi/jcSJauPvm8Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA3aW5tDi6DPElvvaoJWCxozuzJyA" class="d-block w-100" alt="Ejemplo Navbar Plegable">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Navbar Plegable</h5>
+                            <p>Usa **JavaScript de Bootstrap** para plegarse en móvil, sin escribir una línea de JS propio.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://p.bdir.in/img/Lightweight-jQuery-Sticky-Navigation-With-Scrollspy---Stickymenujs.png" class="d-block w-100" alt="Ejemplo Scroll Spy">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Scroll Spy</h5>
+                            <p>Resalta automáticamente el enlace activo en la navegación al desplazarte (Atributo `data-bs-spy`).</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-5">
+            <h2 class="text-center mb-4 display-6">Prueba de Usabilidad JS y Contacto</h2>
+            <p class="text-center lead">El contenido largo a continuación es para probar dos funcionalidades clave de usabilidad:</p>
+            <ol class="list-group list-group-numbered w-75 mx-auto mb-5">
+                <li class="list-group-item">El **Scroll Spy** de Bootstrap: Mira cómo los enlaces en la barra de navegación se activan a medida que esta sección (`#contacto`) entra en el viewport.</li>
+                <li class="list-group-item">El botón **Volver Arriba** (nuestro JS personalizado): Aparecerá abajo a la derecha una vez que hayas bajado lo suficiente, con un desplazamiento suave (`behavior: 'smooth'`).</li>
+            </ol>
+            
+            <div style="height: 100vh;"></div>
+            <div style="height: 100vh;"></div>
+        </section>
+
+    </main>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Volver arriba" class="btn btn-primary rounded-circle shadow">
+        <i class="bi bi-arrow-up"></i> 
+    </button>
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">Proyecto Final M04 &copy; 2025</p>
+            <p class="mb-0"><small>Diseño con Bootstrap 5, Flexbox, Grid y JavaScript.</small></p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous"></script>
+
+    <script src="custom_script.js"></script>
+</body>
+</html>

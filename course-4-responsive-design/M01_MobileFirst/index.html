@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>M01 - Principios Mobile-First</title>
+    <link rel="stylesheet" href="mobile_first.css">
+</head>
+<body>
+
+    <header>
+        <h1>Módulo 1: Mobile-First y Unidades Fluidas</h1>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Diseño para el Móvil</h2>
+            <p>Este es el estilo base (Mobile-First). El contenido debe ser legible en pantallas pequeñas. La fuente usa unidades relativas.</p>
+            
+            <div class="card-container">
+                <article class="feature-card">
+                    <h3>Tarjeta 1</h3>
+                    <p>Uso de margen y relleno en `em` y `rem` para mantener proporciones fluidas.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Tarjeta 2</h3>
+                    <p>El ancho de estas tarjetas se basa en porcentajes (%) para adaptarse al espacio disponible.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ancho de la pantalla: <span id="viewport-width"></span></p>
+    </footer>
+
+    <script>
+        function updateViewportWidth() {
+            document.getElementById('viewport-width').textContent = window.innerWidth + 'px';
+        }
+        updateViewportWidth();
+        window.addEventListener('resize', updateViewportWidth);
+    </script>
+</body>
+</html>

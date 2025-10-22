@@ -1,0 +1,182 @@
+/* -----------------------------------------------------------------
+   FILE: style.css (Versión Mejorada para Estética)
+   ----------------------------------------------------------------- */
+
+/* == 1. RESET Y ESTILOS BASE == */
+
+body {
+    /* Mantenido de Tarea Dos */
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f0f4f8; /* Fondo muy claro y suave */
+    color: #1e293b; /* Texto casi negro para excelente contraste */
+    margin: 0;
+    padding: 0;
+    line-height: 1.5; /* Buena legibilidad general */
+}
+
+/* Requisito de accesibilidad: mostrar el enlace "Saltar al contenido" solo cuando se enfoca */
+a[href="#main_content"] {
+    position: absolute;
+    left: -9999px;
+}
+
+a[href="#main_content"]:focus {
+    position: static;
+    left: auto;
+    display: block; /* Cambia a bloque para ocupar espacio al enfocarse */
+    color: white;
+    background-color: #0b5fa5;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* == 2. HEADER Y NAVEGACIÓN == */
+
+header {
+    background-color: #0d47a1; /* Azul corporativo fuerte */
+    color: white;
+    padding: 30px 0 10px 0; /* Más espacio arriba y abajo */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Paso 8: Estilo para h1 */
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #ffb300; /* Dorado/Amarillo brillante para acento */
+    font-size: 2.5em; /* Título más grande */
+    margin: 10px 0 0 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil en el texto */
+}
+
+
+header img {
+    margin: 10px auto;
+    display: block;
+    border-radius: 8px; 
+    width: 200px; /* Aquí establecemos el ancho en CSS */
+    height: 150px; /* Aquí establecemos la altura en CSS */
+    object-fit: cover; 
+    border: 4px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: #1565c0; /* Azul ligeramente más claro */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    /* Tarea Dos Requisito */
+    display: inline-block; 
+    width: 90%; /* Aumento el ancho para que se vea mejor */
+}
+
+nav ul li {
+    /* Tarea Dos Requisito, se mantiene la propiedad */
+    margin: 0 15px; 
+    /* Estilo para los items de la lista */
+    display: inline-block; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    font-weight: 600;
+}
+
+nav a:hover {
+    background-color: #007bb5;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* == 3. CONTENIDO PRINCIPAL (MAIN) == */
+
+main {
+    background-color: #ffffff;
+    font-size: 1.05em;
+    padding: 40px; /* Más padding para respirar */
+    min-height: 60vh;
+    margin: 30px auto;
+    max-width: 960px; /* Ancho cómodo para lectura */
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra más definida */
+}
+
+p {
+    line-height: 1.7; /* Mayor interlineado para excelente legibilidad */
+    margin-bottom: 25px;
+    text-align: justify; /* Justifica para un look limpio */
+}
+
+main a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: #0b5fa5;
+}
+
+/* == 4. LAYOUTS AVANZADOS (GRID y FLEX) == */
+
+/* Tarea Dos Requisitos GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño más robusto y responsivo */
+    /* Mantenemos justify-content y row-gap para el efecto visual */
+    justify-content: space-around;
+    row-gap: 30px; 
+    column-gap: 30px; /* Espacio entre columnas */
+    padding: 20px 0;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tarea Dos Requisitos FLEX */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espacio moderno entre elementos flex */
+    padding: 20px 0;
+}
+
+/* == 5. FOOTER == */
+
+footer {
+    background-color: #0d47a1;
+    color: #bbdefb; /* Color azul muy claro para el texto */
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #ffb300; /* Línea de acento */
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffb300;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

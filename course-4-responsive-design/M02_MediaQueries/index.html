@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>M02 - Implementación de Media Queries</title>
+    <link rel="stylesheet" href="responsive_stylesheet.css">
+</head>
+<body>
+
+    <header>
+        <h1>Módulo 2: Consultas de Medios y Breakpoints</h1>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Diseño Adaptativo con @media</h2>
+            <p>El diseño base se ve en móvil. Al redimensionar la ventana (o ver en una pantalla más grande), el CSS utiliza Media Queries con **min-width** para aplicar nuevos estilos.</p>
+            
+            <div class="card-container">
+                <article class="feature-card">
+                    <h3>Tarjeta 1: Mobile-First</h3>
+                    <p>En móvil, estas tarjetas se apilan (estilo base). Al llegar al breakpoint de Tablet, se pondrán una al lado de la otra.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Tarjeta 2: Breakpoint Tablet</h3>
+                    <p>Al crecer la pantalla, las Media Queries se activan para crear un layout de dos columnas, manteniendo la consistencia visual.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Tarjeta 3: Breakpoint Desktop</h3>
+                    <p>Al llegar al breakpoint de escritorio, el layout cambiará a tres columnas para aprovechar mejor el espacio horizontal.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Abre el inspector (F12) y arrastra el borde para ver los cambios. (cambia el ancho de la pagina)</p>
+    </footer>
+
+</body>
+</html>

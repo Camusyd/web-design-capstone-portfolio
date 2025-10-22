@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Semántico y Validación - Curso 1</title>
+</head>
+
+<body>
+    <header>
+        <h1>Blog de Accesibilidad y Desarrollo Frontend</h1>
+        
+        <nav aria-label="Navegación Principal del Sitio">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Archivos</a></li>
+                <li><a href="#">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <article>
+            
+            <header>
+                <h2>La Estructura es Clave: Por Qué el HTML Semántico es Accesible</h2>
+                
+                <p>Publicado por: [Tu Nombre] el 
+                    <time datetime="2024-10-15">15 de Octubre de 2024</time>
+                </p>
+                </header>
+
+            <section aria-labelledby="intro-semantica">
+                <h3 id="intro-semantica">¿Qué Gana el DOM con la Semántica?</h3>
+                <p>El Modelo de Objetos del Documento (**DOM**) se vuelve mucho más legible y lógico. Al usar etiquetas como &lt;article&gt; y &lt;section&gt;, el DOM ya no es un mar de &lt;div&gt;s, sino un árbol bien definido que los navegadores, buscadores y asistentes virtuales pueden interpretar sin esfuerzo.</p>
+            </section>
+
+            <section aria-labelledby="validacion-w3c">
+                <h3 id="validacion-w3c">Validación: El Sello de Calidad</h3>
+                <p>Un HTML semántico suele ser un HTML **válido**. Este documento ha sido verificado con el Validador de Marcado W3C. La validación asegura la sintaxis correcta y reduce errores que podrían romper el diseño o la accesibilidad.</p>
+            </section>
+
+            <aside>
+                <h4>Recursos Relacionados</h4>
+                <ul>
+                    <li><a href="https://validator.w3.org/">Validador Oficial W3C</a></li>
+                    <li><a href="#">Guía de Uso de Etiquetas ARIA (Curso 5)</a></li>
+                </ul>
+            </aside>
+
+        </article>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2024 Ajax - Portafolio HTML Semántico</p>
+        <address>
+            Email: <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a>
+        </address>
+    </footer>
+
+</body>
+</html>

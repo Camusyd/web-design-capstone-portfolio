@@ -1,0 +1,225 @@
+/* -------------------------------------------------------------------------- */
+/* ACCESIBILIDAD Y RESET GLOBAL */
+/* -------------------------------------------------------------------------- */
+/* Permite el scroll suave por defecto (se anulará en la media query de accesibilidad) */
+html{
+    scroll-behavior: smooth;
+}
+/* Estándar de desarrollo web para width y padding */
+* {
+    box-sizing: border-box; 
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* VISTA MÓVIL (Mobile First) - Estilos Base y Grid de 1 Columna */
+/* -------------------------------------------------------------------------- */
+body {
+    /* Base Light Mode */
+    background-color: #f7f7f7;
+    color: #1f2937; 
+    padding: 15px;
+    margin: 0;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el dark mode */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* Estilos base del botón (visible en Light Mode) */
+#darkModeToggle {
+    background-color: transparent;
+    color: #1f2937; /* Color oscuro */
+    border: 1px solid #1f2937;
+    padding: 8px 12px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    font-weight: bold;
+    transition: all 0.3s;
+    /* Posicionamiento absoluto definido en el HTML, pero aquí el estilo básico */
+}
+
+/* REQUISITO: Grid de 1 columna para la vista móvil */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* REQUISITO: 10px de espacio */
+    gap: 10px;
+    padding: 10px;
+}
+
+figure {
+    /* Figura base */
+    margin: 0;
+    padding: 15px;
+    border: 5px solid #3b82f6; /* Borde azul claro por defecto */
+    background-color: #ffffff; 
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0; 
+    object-fit: cover;
+}
+
+figcaption {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* --- MEDIA QUERY 1: VISTA TABLETA (>= 772px) ------------------------------ */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 772px) {
+    
+    .grid {
+        /* REQUISITO: Cuadrícula de dos columnas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    figure {
+        /* REQUISITO: Forma circular */
+        border-radius: 50%;
+        overflow: hidden; 
+    }
+
+    figure img {
+        /* Ajuste para que la imagen se adapte bien a la forma circular */
+        height: 100%;
+        object-fit: cover;
+        min-height: 250px; 
+    }
+
+    /* REQUISITO: La última figura debe ocupar ambas columnas */
+    .grid figure:last-of-type {
+        grid-column: 1 / -1; 
+        border-radius: 10px; 
+        padding: 20px; 
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* --- MEDIA QUERY 2: VISTA PANTALLA GRANDE (>= 992px) ---------------------- */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {
+    
+    /* El grid permanece en 2 columnas, según la demostración del instructor. */
+
+    figure {
+        /* REQUISITO: Eliminar el radio del borde (figuras cuadradas) */
+        border-radius: 10px;
+        overflow: visible; 
+    }
+
+    figure img {
+        /* Restablecer para que la imagen no esté forzada a una altura mínima */
+        height: auto;
+        min-height: 0; 
+    }
+
+    /* REQUISITO: Cada tercera figura debe ocupar ambas columnas */
+    .grid figure:nth-child(3n) {
+        grid-column: 1 / -1; 
+        border-radius: 10px;
+    }
+    
+    /* Aseguramos que otras figuras, especialmente la última, no se extiendan 
+       si no cumplen con el :nth-child(3n) */
+    .grid figure:not(:nth-child(3n)) {
+        grid-column: span 1; 
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* --- MEDIA QUERY 3: ACCESIBILIDAD (prefers-reduced-motion) ---------------- */
+/* -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion) {
+    /* REQUISITO: Eliminar el comportamiento de desplazamiento suave */
+    html {
+        scroll-behavior: auto;
+    }
+    /* Eliminar cualquier transición para quienes prefieren la inmediatez */
+    body, figure, figure img, #darkModeToggle {
+        transition: none !important;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* --- MEDIA QUERY 4: ACCESIBILIDAD (prefers-color-scheme: dark) ------------ */
+/* -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    /* Aplica estilos solo si la clase .dark-mode NO está presente (modo automático) */
+    body:not(.dark-mode) {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    body:not(.dark-mode) figure {
+        /* REQUISITO: Fondo de las figuras a un color oscuro */
+        background-color: #242424;
+        /* REQUISITO: Fuente de las figuras a un color más claro (amarillento/cálido) */
+        color: #fce38a;
+        /* REQUISITO: Borde de las figuras a negro */
+        border-color: #000000;
+    }
+
+    body:not(.dark-mode) a {
+        color: #8caff0;
+    }
+
+    /* AJUSTE: El botón debe ser legible en fondo oscuro */
+    body:not(.dark-mode) #darkModeToggle {
+        color: #f7f7f7; /* Color de texto claro */
+        border-color: #f7f7f7; /* Borde claro */
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* --- ESTILOS PARA TOGGLE MANUAL (.dark-mode) - Anulan la preferencia del sistema */
+/* -------------------------------------------------------------------------- */
+/* La clase .dark-mode es añadida por el script JS al pulsar el botón */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode figure {
+    background-color: #242424;
+    color: #fce38a;
+    border-color: #000000;
+}
+
+body.dark-mode a {
+    color: #8caff0;
+}
+
+/* AJUSTE: El botón debe ser legible en fondo oscuro */
+body.dark-mode #darkModeToggle {
+    color: #f7f7f7; /* Color de texto claro */
+    border-color: #f7f7f7; /* Borde claro */
+}
+
+

@@ -1,0 +1,181 @@
+/* ======================================================
+📚 Hoja de Estilo: Conceptos Fundamentales de CSS
+Descripción: Ejemplo práctico de selectores, cascada,
+especificidad, layout (Grid/Flex) y accesibilidad.
+====================================================== */
+
+/* ============================
+1. SELECTORES BÁSICOS
+============================ */
+
+/* Selector de elemento (baja especificidad) */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Selector de clase (media especificidad) */
+.destacado {
+  color: #b22222; /* rojo oscuro */
+  font-weight: bold;
+}
+
+/* Selector de ID (alta especificidad) */
+#principal {
+  background-color: #e0f7fa; /* azul claro */
+  border: 2px solid #00acc1;
+  padding: 1em;
+}
+
+/* ============================
+2. SELECTORES DESCENDENTES
+============================ */
+
+/* Selector descendente general (afecta todos los <a> dentro de <nav>) */
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+/* Selector de hijo directo (solo <a> hijos directos de <nav>) */
+nav > a {
+  background-color: #00695c;
+  border-radius: 4px;
+}
+
+/* ============================
+3. LA CASCADA Y ESPECIFICIDAD
+============================ */
+
+/* Primera regla: color azul para todos los párrafos */
+p {
+  color: blue;
+}
+
+/* Segunda regla (misma especificidad): esta gana por aparecer después */
+p {
+  color: green;
+}
+
+/* Pero si hay un ID, tiene prioridad */
+#aviso {
+  color: red; /* gana sobre las clases y etiquetas */
+}
+
+/* ============================
+4. PROPIEDADES DE ESTILO COMUNES
+============================ */
+
+/* Elimina el subrayado de los enlaces */
+a {
+  text-decoration: none;
+}
+
+/* Control de tamaño de texto */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Listas sin viñetas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* ============================
+5. MAQUETACIÓN CON GRID Y FLEXBOX
+============================ */
+
+/* GRID: estructura bidimensional */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  gap: 1em;
+  padding: 1em;
+}
+
+.grid-container div {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+/* FLEXBOX: estructura unidimensional */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* permite salto de línea */
+  background-color: #f0f0f0;
+  padding: 1em;
+}
+
+.flex-container div {
+  background-color: #c8e6c9;
+  border-radius: 8px;
+  padding: 1em;
+  width: 150px;
+  margin: 0.5em;
+  text-align: center;
+}
+
+/* ============================
+6. ANCLAJES Y ACCESIBILIDAD
+============================ */
+
+/* Enlace "Saltar al contenido principal" oculto por defecto */
+a[href^="#main_content"] {
+  position: absolute;
+  left: -9999px; /* fuera de pantalla */
+}
+
+/* Visible al enfocarse con Tab */
+a[href^="#main_content"]:focus {
+  position: static;
+  left: 0;
+  background: #ffeb3b;
+  color: #000;
+  display: inline-block;
+  padding: 0.5em;
+  border: 2px solid #000;
+}
+
+/* ============================
+7. RESETEO DE ESTILOS BÁSICO
+============================ */
+
+/* Para anular diferencias entre navegadores */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================
+8. DEMO VISUAL DE LA CASCADA
+============================ */
+
+/* Mismo elemento afectado por múltiples reglas */
+p.demo {
+  color: blue; /* primera regla */
+}
+
+p.demo {
+  color: purple; /* esta gana (última) */
+}
+
+p.demo#importante {
+  color: orange; /* tiene ID -> gana todo */
+}

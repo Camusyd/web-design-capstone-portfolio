@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M02 - Galería de Fotos Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Galería de Fotos (Módulo 2)</h1>
+        <p>Utiliza el ratón o el tacto para interactuar con las miniaturas y previsualizar la imagen grande.</p>
+
+        <section id="visor">
+            <figure>
+                <!-- La imagen inicial para el visor -->
+                <img id="image" 
+                    src="https://i.pinimg.com/originals/d1/75/d9/d175d9512ea84276cbeffb208abf8c81.jpg" 
+                    alt="Vista principal de la Galería: un paisaje al atardecer." 
+                    width="600" 
+                    height="400">
+                <figcaption id="caption">
+                    Haz hover sobre las miniaturas para previsualizar.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="miniaturas">
+            <h2>Miniaturas</h2>
+            <ul id="image-list">
+
+                <li>
+                    <img class="thumbnail" 
+                        src="https://images.unsplash.com/photo-1526482312921-58d5666a52c0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        alt="Miniatura de una ciudad por la noche." 
+                        data-full-size="https://images.unsplash.com/photo-1526482312921-58d5666a52c0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        data-description="Luces de la ciudad reflejándose en el río al anochecer." 
+                        tabindex="0">
+                </li>
+                <li>
+                    <img class="thumbnail" 
+                        src="https://st2.depositphotos.com/10440072/43945/i/950/depositphotos_439458380-stock-photo-tropical-beach-panorama-view-summer.jpg" 
+                        alt="Miniatura de una playa tropical." 
+                        data-full-size="https://st2.depositphotos.com/10440072/43945/i/950/depositphotos_439458380-stock-photo-tropical-beach-panorama-view-summer.jpg" 
+                        data-description="Arena blanca y palmeras en una playa tropical." 
+                        tabindex="0">
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

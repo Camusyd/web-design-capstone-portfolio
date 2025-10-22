@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo Solicitud-Respuesta Web - Fundamentos HTML</title>
+    </head>
+
+<body>
+    <header>
+        <h1>El Misterio Resuelto: Ciclo de la Comunicación Web</h1>
+    </header>
+
+    <main>
+        <h2>¿Qué ocurre cuando escribimos una URL?</h2>
+        <h3>Fase 1: La Solicitud (Request)</h3>
+        <p>Cuando un usuario escribe una URL y presiona Enter, el navegador (el **cliente**) envía una **solicitud HTTP** al servidor. Esta solicitud pregunta al servidor: "Por favor, dame el archivo que tienes en esta dirección."</p>
+
+        <img src="https://via.placeholder.com/300x150?text=Solicitud+HTTP" alt="Diagrama conceptual de un navegador enviando una solicitud HTTP al servidor." width="300">
+        <h3>Fase 2: La Respuesta (Response)</h3>
+        <p>El **servidor** encuentra el archivo (en este caso, un archivo **.html**) y lo envía de vuelta al navegador junto con una **respuesta HTTP** (como el código 200 OK).</p>
+
+        <h3>Fase 3: El Renderizado</h3>
+        <p>El navegador recibe el código HTML, lo lee línea por línea, construye el **Modelo de Objetos del Documento (DOM)** y, finalmente, **renderiza** la página web visible.</p>
+        
+        <h4>Archivos que Recibe el Navegador:</h4>
+        <ul>
+            <li>**HTML:** La estructura de la página.</li>
+            <li>**CSS:** Los estilos (cómo se ve).</li>
+            <li>**JavaScript:** La interactividad (lo que hace).</li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bitácora del Curso 1 - Estructura HTML Base.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* REGLA CRÍTICA: Aplica el modelo de caja correcto. */
+* {
+    box-sizing: border-box; 
+}
+
+/* --- ESTILOS BASE Y VISTA MÓVIL (Por defecto, < 772px) --- */
+
+body {
+    background-color: #dedede;
+}
+/* ... (Otros estilos h1, a, p, img sin cambios) ... */
+
+h1 { text-align: center; font-family: Arial, sans-serif; font-size: 32px; }
+a { color: #000; text-decoration: none; font-family: Arial, sans-serif; }
+p { font-size: 25px; font-family: Arial, sans-serif; text-align: center; }
+img{ width: 100%; }
+
+
+/* Estilos de los contenedores div (Vista Móvil: 1 columna) */
+div{
+    /* En móvil, deben apilarse: 1 columna */
+    display: block; 
+    width: 90%; 
+    margin: 10px auto; 
+    padding: 2px;
+}
+
+/* Estilos de las imágenes dentro de los divs (Vista Móvil) */
+div img{
+    width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------- */
+/* --- CONSULTA #1: VISTA TABLETA (>= 772px) --- */
+/* Requisitos: 2 columnas (45%), max-height imagen (30vh) */
+@media screen and (min-width: 772px) {
+    
+    div {
+        /* Cambio clave: inline-block para 2 columnas */
+        display: inline-block; 
+        width: 45%; 
+        vertical-align: top; 
+        /* Margen lateral para separar las 2 columnas */
+        margin: 10px 2%; 
+    }
+
+    div img {
+        /* Requisito: máximo 30% de la altura del viewport */
+        max-height: 30vh; 
+        width: auto; 
+    }
+}
+
+/* ------------------------------------------------------------- */
+/* --- CONSULTA #2: VISTA PANTALLA GRANDE (>= 998px) --- */
+/* Requisitos: 3 columnas (30%) */
+@media screen and (min-width: 998px) {
+    
+    /* SOLUCIÓN FINAL CONFIABLE PARA 3 COLUMNAS */
+    div {
+        /* Requisito: 30% de la anchura del viewport */
+        width: 30%; 
+        
+        /* Ajuste de margen: 
+           30% * 3 = 90%. El 10% restante debe acomodar los 3 divs más el espacio en blanco.
+           Usando un margen de 1.66% a cada lado (1.66 * 6 = 9.96%) funciona bien.
+           Lo más seguro es usar un margen más pequeño y dejar que el 90% del ancho haga su trabajo.
+        */
+        margin: 10px 1.5%; 
+    }
+    
+    /* VUELVE A PROBAR ESTO: Asegurarse de que el elemento padre (main o body) no tenga un ancho restringido que esté causando el problema. 
+    Asegúrate de que estás viendo una ventana con al menos 998px de ancho. */
+}
