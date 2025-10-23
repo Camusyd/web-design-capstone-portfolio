@@ -1,8 +1,32 @@
-# Portafolio de Desarrollo Web | Especialización: Diseño Web para Todos (University of Michigan)
+# 🌐 Portafolio de Desarrollo Web  
+### **Especialización:** [Web Design for Everybody: Basics of Web Development & Coding (University of Michigan)](https://www.coursera.org/specializations/web-design)
 
-> **Autor:** Juan Pablo Canas Jiménez
-> **Certificado:** [Link al Certificado de Coursera]
-> **Demo en Vivo del Capstone:** [Link a la demostración en vivo del Capstone (ej. GitHub Pages, Netlify)]
+> **Autor:** Juan Pablo Canas Jiménez  
+> **Certificados:** Verificados por Coursera  
+> **Demo en Vivo del Capstone:** 👉 [camusyd.github.io/web-design-capstone-portfolio/capstone-portfolio-project/](https://camusyd.github.io/web-design-capstone-portfolio/capstone-portfolio-project/)
+
+---
+
+## 🎓 Certificados del Programa
+
+| Curso | Enlace del Certificado |
+|:------|:------------------------|
+| **HTML5 Application Development Fundamentals** | [Ver Certificado](https://coursera.org/share/9ca932b572fc034e1904366fd50e1d85) |
+| **Advanced CSS3** | [Ver Certificado](https://coursera.org/share/3f48d8b765d640f04e89928ebd1560e5) |
+| **Interactivity with JavaScript** | [Ver Certificado](https://coursera.org/share/796def8f0747777e547d03b6f6bf3ee2) |
+| **Advanced Styling with Responsive Design** | [Ver Certificado](https://www.coursera.org/account/accomplishments/verify/ZOI4JASC8UIG) |
+
+---
+
+## 💼 Proyecto Final (Capstone)
+
+**Título del Proyecto:** *Web Design Capstone Portfolio*  
+**Descripción:**  
+Desarrollo completo de un portafolio profesional utilizando principios de diseño web moderno, con enfoque **mobile-first**, **accesibilidad**, y **responsividad avanzada** aplicando HTML5, CSS3 y JavaScript.
+
+🔗 **Demo en vivo:** [Ver Proyecto](https://camusyd.github.io/web-design-capstone-portfolio/capstone-portfolio-project/)  
+💻 **Repositorio en GitHub:** [camusyd/web-design-capstone-portfolio](https://github.com/Camusyd/web-design-capstone-portfolio)
+
 
 ---
 
@@ -10,7 +34,7 @@
 
 Este portafolio es la culminación de la Especialización "Diseño Web para Todos" de la Universidad de Michigan. Demuestra mi capacidad para construir **sitios web accesibles, responsivos y de alto rendimiento** utilizando **HTML5, CSS3 y JavaScript**.
 
-**Punto Clave para Empleadores:** El **Proyecto Capstone** es un portafolio web profesional que cumple rigurosamente con las **Web Content Accessibility Guidelines (WCAG)**, asegurando usabilidad para un público amplio, incluyendo usuarios con discapacidades.
+l **Proyecto Capstone** es un portafolio web profesional que cumple rigurosamente con las **Web Content Accessibility Guidelines (WCAG)**, asegurando usabilidad para un público amplio, incluyendo usuarios con discapacidades.
 
 ---
 
