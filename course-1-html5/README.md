@@ -10,7 +10,7 @@ El objetivo de este curso fue establecer una base sólida en la **estructura web
 
 - **Repositorio Principal:** [Enlace a la raíz de tu repositorio de GitHub](#)
 - **Demo en Vivo (Proyecto Final):** [ProyectoFinal.html](ProyectoFinal.html)
-- **Certificado del Curso:** [Enlace a tu certificado de Coursera](#)
+- **Certificado del Curso:** [Enlace a tu certificado de Coursera](https://www.coursera.org/account/accomplishments/verify/YMDVNGJF7W81)
 
 ---
 
