@@ -4,13 +4,24 @@ Este repositorio documenta el trabajo realizado en el curso de **Estilización A
 
 ---
 
-## 🎓 Información del Curso
+| Detalle | Valor |
+|:---------|:------|
+| **Curso** | Estilización Avanzada con Diseño Adaptativo |
+| **Plataforma** | Coursera |
+| **Especialización** | [Web Design for Everybody: Basics of Web Development & Coding Specialization](https://www.coursera.org/specializations/web-design) |
+| **Institución** | University of Michigan |
+| **Instructora** | Colleen van Lent, Ph.D. |
+| **Estado** | Completado |
+| **Enlace del Curso** | [Advanced Styling with Responsive Design - Coursera](https://www.coursera.org/learn/responsivedesign) |
+
+---
+
+## 🏆 Certificado de Finalización
 
 | Detalle | Valor |
-| :--- | :--- |
-| **Institución** | University of Michigan (vía Coursera) |
-| **Enfoque** | CSS Responsive, Layout Avanzado y A11y. |
-| **Estado** | Completado. |
+|:---------|:------|
+| **Certificado** | Completado |
+| **Enlace al Certificado** | [Ver Certificado](https://www.coursera.org/account/accomplishments/verify/ZOI4JASC8UIG) |
 
 ---
 
